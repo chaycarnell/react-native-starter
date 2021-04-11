@@ -8,12 +8,12 @@
     "android:release": "react-native run-android ENVFILE=.env.release --variant=release",
     "adb:reverse:debug": "adb reverse tcp:8081 tcp:8081",
     "adb:reverse:server": "adb reverse tcp:4000 tcp:4000",
-    "ios": "react-native run-ios ENVFILE=.env --configuration Debug",
-    "ios:release": "react-native run-ios ENVFILE=.env.release --configuration Release",
-    "ios:small": "react-native run-ios --simulator 'iPhone SE (2nd generation)'",
-    "ios:xsmall": "react-native run-ios --simulator 'iPhone SE (1st generation)'",
-    "ios:ipad": "react-native run-ios --simulator 'iPad (7th generation)'",
-    "ios:ipadxl": "react-native run-ios --simulator 'iPad Pro (12.9-inch) (4th generation)'",
+    "ios": "npm run ios:pods && react-native run-ios ENVFILE=.env --configuration Debug",
+    "ios:release": "npm run ios:pods && react-native run-ios ENVFILE=.env.release --configuration Release",
+    "ios:small": "npm run ios:pods && react-native run-ios --simulator 'iPhone SE (2nd generation)'",
+    "ios:xsmall": "npm run ios:pods && react-native run-ios --simulator 'iPhone SE (1st generation)'",
+    "ios:ipad": "npm run ios:pods && react-native run-ios --simulator 'iPad (7th generation)'",
+    "ios:ipadxl": "npm run ios:pods && react-native run-ios --simulator 'iPad Pro (12.9-inch) (4th generation)'",
     "nuke": "rm -rf node_modules && npm install && npm run ios:pods --reset-cache && npm run start --reset-cache",
     "ios:pods": "cd ios && pod install && cd ..",
     "ios:pods:update": "cd ios && pod install --repo-update && cd ..",
@@ -30,6 +30,7 @@
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.9.4",
     "@react-navigation/stack": "^5.14.4",
+    "@sentry/react-native": "^2.4.0",
     "graphql": "^15.5.0",
     "graphql-tag": "^2.11.0",
     "react": "17.0.1",
@@ -84,11 +85,5 @@
     ],
     "timers": "fake",
     "testEnvironment": "jsdom"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint",
-      "pre-push": "npm run test"
-    }
   }
 }

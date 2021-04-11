@@ -17,6 +17,14 @@ This boilerplate has been built using:
 
 SafeArea and StatusBar have already been set to avoid common issues with content overlapping device notches, or status bar content being insvisible/overlapped.
 
+### Sentry:
+
+Sentry is bundled with this boilerplate, please make sure you update the sentry.properties files for both android and iOS before trying to run the application, failure to do so will result in build failure.
+
+the SENTRY_DSN value in your .env file should also be configured to your projects DSN value.
+
+Note: Sentry will only be activated in environments that have been added to the active environments reference array in the sentry.ts util file. These values should match at least one of your desired environment APP_ENV values in the .env file of your project. This prevents development environments from polluting your projects reports.
+
 ### Aliases:
 
 Some aliases have been configured, for example @screens, @components, addtional aliases can be added, and will require configuration in the following files:

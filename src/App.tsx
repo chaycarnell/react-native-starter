@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import { SafeAreaView, StatusBar } from 'react-native';
+import { StatusBar } from 'react-native';
 import {
   NavigationContainer,
   NavigationContainerRef,
 } from '@react-navigation/native';
 import RNBootSplash from 'react-native-bootsplash';
 import { enableScreens } from 'react-native-screens';
-import { ApolloProvider } from '@components';
+import { ApolloProvider, SafeArea } from '@components';
 import {
   setNavigator,
   applyBackHandleListener,
@@ -18,7 +18,11 @@ import {
   checkUniversalLinkState,
 } from '@utils/linking';
 import { applyStateListeners, removeStateListeners } from '@utils/activity';
+import { initialiseSentry } from '@utils/sentry';
 import { Screens } from '@screens';
+
+// Initialise Sentry project for crash and performance reporting
+initialiseSentry();
 
 // Optimize memory usage and performance by bringing the native navigation component (UIViewController for iOS, and FragmentActivity for Android)
 enableScreens();
@@ -44,11 +48,11 @@ const App = () => {
   return (
     <ApolloProvider>
       <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeArea>
         <NavigationContainer ref={setRef}>
           <Screens />
         </NavigationContainer>
-      </SafeAreaView>
+      </SafeArea>
     </ApolloProvider>
   );
 };
