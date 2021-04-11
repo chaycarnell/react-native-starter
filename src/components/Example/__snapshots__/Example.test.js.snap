@@ -2,11 +2,12 @@
 
 exports[`Example component given default props should render correctly 1`] = `
 <View
+  color="#0f62fe"
   style={
     Array [
       Object {
         "alignSelf": "center",
-        "backgroundColor": "green",
+        "backgroundColor": "#0f62fe",
         "display": "flex",
         "height": 667,
         "justifyContent": "center",
@@ -17,9 +18,11 @@ exports[`Example component given default props should render correctly 1`] = `
   }
 >
   <Text
+    color="#FFF"
     style={
       Array [
         Object {
+          "color": "#FFF",
           "fontSize": 48,
           "fontWeight": "bold",
           "textAlign": "center",
@@ -27,7 +30,7 @@ exports[`Example component given default props should render correctly 1`] = `
       ]
     }
   >
-    Tap To Navigate
+    
   </Text>
 </View>
 `;

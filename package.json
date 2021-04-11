@@ -80,7 +80,7 @@
   "jest": {
     "preset": "react-native",
     "transformIgnorePatterns": [
-      "node_modules/(?!(@react-native|react-native|react-native-url-polyfill|react-native-config|react-navigation|@react-navigation/.*|@react-navigation/native|@react-navigation/stack|react-native-gesture-handler|react-native-iphone-x-helper)/)"
+      "node_modules/(?!(@react-native|react-native|react-native-url-polyfill|react-native-config|react-navigation|@react-navigation/.*|@react-navigation/native|@react-navigation/stack|react-native-gesture-handler|react-native-iphone-x-helper|@sentry/react-native|react-native-screens)/)"
     ],
     "setupFiles": [
       "./node_modules/react-native-gesture-handler/jestSetup.js"

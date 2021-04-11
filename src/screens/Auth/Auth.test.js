@@ -30,9 +30,10 @@ describe('Auth screen', () => {
       fireEvent.press(getByTestId('AuthNavigation'));
 
       expect(testProps.navigation.navigate).toHaveBeenCalled();
-      expect(testProps.navigation.navigate).toHaveBeenCalledWith({
-        key: 'Dashboard',
-      });
+      expect(testProps.navigation.navigate).toHaveBeenCalledWith(
+        'Dashboard',
+        {},
+      );
     });
   });
 });
