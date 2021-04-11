@@ -22,7 +22,8 @@
     "test:update": "jest --updateSnapshot",
     "prettier:write": "npx prettier --write **/*.{js,ts,tsx,json} && npx prettier --write *.{js,json}",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
-    "upgrade:rn": "npx react-native upgrade"
+    "upgrade:rn": "npx react-native upgrade",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@apollo/client": "^3.3.14",
