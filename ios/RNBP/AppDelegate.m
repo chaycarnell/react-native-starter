@@ -4,7 +4,6 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
-// Splash screen util
 #import "RNBootSplash.h"
 
 #ifdef FB_SONARKIT_ENABLED
@@ -51,7 +50,6 @@ static void InitializeFlipper(UIApplication *application) {
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
 
-  // Splash screen util
   [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView];
 
   return YES;

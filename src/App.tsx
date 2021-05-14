@@ -18,11 +18,7 @@ import {
   checkUniversalLinkState,
 } from '@utils/linking';
 import { applyStateListeners, removeStateListeners } from '@utils/activity';
-import { initialiseSentry } from '@utils/sentry';
 import { Screens } from '@screens';
-
-// Initialise Sentry project for crash and performance reporting
-initialiseSentry();
 
 // Optimize memory usage and performance by bringing the native navigation component (UIViewController for iOS, and FragmentActivity for Android)
 enableScreens();
