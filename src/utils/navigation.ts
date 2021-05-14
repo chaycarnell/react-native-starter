@@ -1,8 +1,6 @@
 import { BackHandler } from 'react-native';
 import { NavigationContainerRef } from '@react-navigation/native';
 
-export type { StackNavigationProp } from '@react-navigation/stack';
-
 export type RootStackParamList = {
   Auth: {};
   Content: {};

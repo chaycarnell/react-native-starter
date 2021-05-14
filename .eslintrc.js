@@ -23,6 +23,7 @@ module.exports = {
     'react/prop-types': 'off',
     'react/require-default-props': 'off',
     'import/extensions': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
   settings: {
     react: {

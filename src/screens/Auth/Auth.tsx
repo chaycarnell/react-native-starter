@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, TouchableHighlight } from 'react-native';
+import { StackNavigationProp } from '@react-navigation/stack';
 import { Example } from '@components';
-import { RootStackParamList, StackNavigationProp } from 'utils/navigation';
+import { RootStackParamList } from 'utils/navigation';
 
 type AuthScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Auth'>;
 

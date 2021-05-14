@@ -2,8 +2,9 @@ import React from 'react';
 import env from 'react-native-config';
 import { View, TouchableHighlight, Text } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 import { Example } from '@components';
-import { RootStackParamList, StackNavigationProp } from 'utils/navigation';
+import { RootStackParamList } from 'utils/navigation';
 
 type DashboardScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
