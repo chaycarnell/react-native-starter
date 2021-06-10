@@ -2,6 +2,15 @@
 
 A basic React Native boilerplate bundled with a few packages and utilities to improve developer experience.
 
+## Setup:
+
+Current version of this template should be used with:
+
+- NPM v6.9.0
+- Node v12.6
+
+This does make a difference!
+
 ## Usage:
 
 This boilerplate has been built using:

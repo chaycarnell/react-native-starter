@@ -3,6 +3,19 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
+# Set reference to if the environment is part of a CI/CD build
+# i.e. examples below being present in ENV
+# this can be used to shave 20/30 minutes off iOS build times!
+IS_CICD = ENV['FASTLANE_USERNAME or APPCENTER_BUILD_ID']
+
+if IS_CICD
+  puts "IS CI/CD BUILD, FLIPPER WILL NOT BE INSTALLED FOR FASTER BUILDS"
+end
+
+if not IS_CICD
+  puts "IS NOT CI/CD BUILD, FLIPPER WILL BE INSTALLED"
+end
+
 target 'RNBP' do
   config = use_native_modules!
 
@@ -21,7 +34,9 @@ target 'RNBP' do
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
   # you should disable the next line.
-  use_flipper!()
+  if not IS_CICD
+    use_flipper!()
+  end
 
   post_install do |installer|
     react_native_post_install(installer)

@@ -45,15 +45,12 @@ const Render = ({ children }: Props) => {
     const getTokenSilently = async () => null;
 
     // Create authentication middleware to add id_token to requests
-    const authLink = setContext(async (_, { headers }) => {
-      // return the headers to the context so httpLink can read them
-      return {
-        headers: {
-          ...headers,
-          authorization: (await getTokenSilently()) || '',
-        },
-      };
-    });
+    const authLink = setContext(async (_, { headers }) => ({
+      headers: {
+        ...headers,
+        authorization: (await getTokenSilently()) || '',
+      },
+    }));
 
     // Get server URL segments
     const hostSegments = new URL(serviceURL);

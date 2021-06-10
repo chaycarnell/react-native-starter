@@ -11,12 +11,10 @@ const Render = ({
   wrapperColor = '#0f62fe',
   labelColor = '#FFF',
   label = '',
-}: Props) => {
-  return (
-    <S.Wrapper color={wrapperColor}>
-      <S.Label color={labelColor}>{label}</S.Label>
-    </S.Wrapper>
-  );
-};
+}: Props) => (
+  <S.Wrapper color={wrapperColor}>
+    <S.Label color={labelColor}>{label}</S.Label>
+  </S.Wrapper>
+);
 
 export default Render;
