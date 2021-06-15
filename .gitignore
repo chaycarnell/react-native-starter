@@ -60,3 +60,4 @@ buck-out/
 
 #Coverage
 coverage
+junit.xml

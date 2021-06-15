@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="6" failures="0" errors="0" time="4.025">
-  <testsuite name="Example component" errors="0" failures="0" skipped="0" timestamp="2021-06-15T22:16:09" time="1.506" tests="1">
-    <testcase classname="Example component given default props should render correctly" name="Example component given default props should render correctly" time="0.021">
+<testsuites name="jest tests" tests="6" failures="0" errors="0" time="3.075">
+  <testsuite name="Example component" errors="0" failures="0" skipped="0" timestamp="2021-06-15T22:19:37" time="1.164" tests="1">
+    <testcase classname="Example component given default props should render correctly" name="Example component given default props should render correctly" time="0.022">
     </testcase>
   </testsuite>
-  <testsuite name="Auth screen" errors="0" failures="0" skipped="0" timestamp="2021-06-15T22:16:09" time="2.037" tests="2">
-    <testcase classname="Auth screen given default props should render correctly" name="Auth screen given default props should render correctly" time="0.045">
+  <testsuite name="Auth screen" errors="0" failures="0" skipped="0" timestamp="2021-06-15T22:19:37" time="1.633" tests="2">
+    <testcase classname="Auth screen given default props should render correctly" name="Auth screen given default props should render correctly" time="0.043">
     </testcase>
-    <testcase classname="Auth screen given default props should navigate to dashboard page when touchable highlight is selected" name="Auth screen given default props should navigate to dashboard page when touchable highlight is selected" time="0.164">
-    </testcase>
-  </testsuite>
-  <testsuite name="Dashboard screen" errors="0" failures="0" skipped="0" timestamp="2021-06-15T22:16:09" time="2.141" tests="2">
-    <testcase classname="Dashboard screen given default props should render correctly" name="Dashboard screen given default props should render correctly" time="0.054">
-    </testcase>
-    <testcase classname="Dashboard screen given default props should navigate to dashboard page when touchable highlight is selected" name="Dashboard screen given default props should navigate to dashboard page when touchable highlight is selected" time="0.146">
+    <testcase classname="Auth screen given default props should navigate to dashboard page when touchable highlight is selected" name="Auth screen given default props should navigate to dashboard page when touchable highlight is selected" time="0.13">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2021-06-15T22:16:09" time="2.803" tests="1">
-    <testcase classname=" renders correctly" name=" renders correctly" time="0.047">
+  <testsuite name="Dashboard screen" errors="0" failures="0" skipped="0" timestamp="2021-06-15T22:19:37" time="1.815" tests="2">
+    <testcase classname="Dashboard screen given default props should render correctly" name="Dashboard screen given default props should render correctly" time="0.056">
+    </testcase>
+    <testcase classname="Dashboard screen given default props should navigate to dashboard page when touchable highlight is selected" name="Dashboard screen given default props should navigate to dashboard page when touchable highlight is selected" time="0.126">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2021-06-15T22:19:37" time="2.227" tests="1">
+    <testcase classname=" renders correctly" name=" renders correctly" time="0.044">
     </testcase>
   </testsuite>
 </testsuites>
