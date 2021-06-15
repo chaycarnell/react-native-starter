@@ -51,7 +51,7 @@ exports[`Dashboard screen given default props should render correctly 1`] = `
           ]
         }
       >
-        Tap to navigate
+        
       </Text>
     </View>
   </View>

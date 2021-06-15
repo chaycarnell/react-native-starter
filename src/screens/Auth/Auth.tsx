@@ -1,4 +1,5 @@
 import React from 'react';
+import i18n from 'i18next';
 import { View, TouchableHighlight } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { Example } from '@components';
@@ -18,7 +19,7 @@ const Render = ({ navigation }: Props) => (
       <Example
         wrapperColor="#0f62fe"
         labelColor="#FFF"
-        label="Tap to navigate"
+        label={i18n.t('AUTH.DESC')}
       />
     </TouchableHighlight>
   </View>

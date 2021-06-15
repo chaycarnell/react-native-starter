@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="6" failures="0" errors="0" time="3.747">
+  <testsuite name="Example component" errors="0" failures="0" skipped="0" timestamp="2021-06-15T22:04:20" time="1.564" tests="1">
+    <testcase classname="Example component given default props should render correctly" name="Example component given default props should render correctly" time="0.034">
+    </testcase>
+  </testsuite>
+  <testsuite name="Auth screen" errors="0" failures="0" skipped="0" timestamp="2021-06-15T22:04:20" time="2.08" tests="2">
+    <testcase classname="Auth screen given default props should render correctly" name="Auth screen given default props should render correctly" time="0.044">
+    </testcase>
+    <testcase classname="Auth screen given default props should navigate to dashboard page when touchable highlight is selected" name="Auth screen given default props should navigate to dashboard page when touchable highlight is selected" time="0.14">
+    </testcase>
+  </testsuite>
+  <testsuite name="Dashboard screen" errors="0" failures="0" skipped="0" timestamp="2021-06-15T22:04:20" time="2.301" tests="2">
+    <testcase classname="Dashboard screen given default props should render correctly" name="Dashboard screen given default props should render correctly" time="0.059">
+    </testcase>
+    <testcase classname="Dashboard screen given default props should navigate to dashboard page when touchable highlight is selected" name="Dashboard screen given default props should navigate to dashboard page when touchable highlight is selected" time="0.134">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2021-06-15T22:04:20" time="2.699" tests="1">
+    <testcase classname=" renders correctly" name=" renders correctly" time="0.044">
+    </testcase>
+  </testsuite>
+</testsuites>

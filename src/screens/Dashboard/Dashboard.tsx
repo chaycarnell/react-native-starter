@@ -1,4 +1,5 @@
 import React from 'react';
+import i18n from 'i18next';
 import env from 'react-native-config';
 import { View, TouchableHighlight, Text } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
@@ -17,8 +18,9 @@ interface Props {
 
 const Render = ({ navigation }: Props) => {
   useFocusEffect(() => {
-    console.log('Doing something on screen focus!');
+    console.log('Logging on screen focus!');
   });
+
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <TouchableHighlight
@@ -27,7 +29,7 @@ const Render = ({ navigation }: Props) => {
         <Example
           wrapperColor="#007d79"
           labelColor="#FFF"
-          label="Tap to navigate"
+          label={i18n.t('DASHBOARD.DESC')}
         />
       </TouchableHighlight>
       <Text style={{ position: 'absolute', bottom: 0 }}>

@@ -51,7 +51,7 @@ exports[`Auth screen given default props should render correctly 1`] = `
           ]
         }
       >
-        Tap to navigate
+        
       </Text>
     </View>
   </View>

@@ -1,6 +1,6 @@
 {
   "name": "rnbp",
-  "description": "A quick start template for RN apps",
+  "description": "A quick start boilerplate for RN apps",
   "version": "1.0.0",
   "license": "ISC",
   "scripts": {
@@ -14,16 +14,20 @@
     "ios:xsmall": "npm run ios:pods && react-native run-ios --simulator 'iPhone SE (1st generation)'",
     "ios:ipad": "npm run ios:pods && react-native run-ios --simulator 'iPad (7th generation)'",
     "ios:ipadxl": "npm run ios:pods && react-native run-ios --simulator 'iPad Pro (12.9-inch) (4th generation)'",
-    "nuke": "rm -rf node_modules && npm install && npm run ios:pods && npm run start --reset-cache",
+    "clean:builds": "cd android && ./gradlew clean && cd ../ && cd ios && xcodebuild clean && cd ../",
+    "nuke": "npx kill-port 8081 && rm -rf node_modules && npm run clean && npm install && npm run ios:pods && npm run start:reset",
     "ios:pods": "cd ios && pod install && cd ..",
     "ios:pods:update": "cd ios && pod install --repo-update && cd ..",
+    "start:reset": "watchman watch-del-all && react-native start --reset-cache",
     "start": "react-native start",
-    "test": "jest",
+    "test": "jest --watchAll --coverage",
+    "test:ci": "jest --ci --coverage --passWithNoTests",
     "test:update": "jest --updateSnapshot",
     "prettier:write": "npx prettier --write **/*.{js,ts,tsx,json} && npx prettier --write *.{js,json}",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
     "upgrade:rn": "npx react-native upgrade",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "rename": "npx kill-port 8081 && npm install react-native-rename -g && npx react-native-rename 'RNBP' && npm run ios:pods && npm run start:reset"
   },
   "dependencies": {
     "@apollo/client": "^3.3.20",
@@ -33,7 +37,9 @@
     "@react-navigation/stack": "^5.14.5",
     "graphql": "^15.5.0",
     "graphql-tag": "^2.12.4",
+    "i18next": "^20.3.1",
     "react": "17.0.2",
+    "react-i18next": "^11.11.0",
     "react-native": "0.64.2",
     "react-native-bootsplash": "^3.2.3",
     "react-native-config": "^1.4.2",
@@ -69,6 +75,7 @@
     "eslint-plugin-react-native": "^3.11.0",
     "husky": "^6.0.0",
     "jest": "^26.6.3",
+    "jest-junit": "^12.2.0",
     "metro-react-native-babel-preset": "^0.66.0",
     "prettier": "^2.3.1",
     "react-native-rename": "^2.9.0",
@@ -84,6 +91,18 @@
       "./node_modules/react-native-gesture-handler/jestSetup.js"
     ],
     "timers": "fake",
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "clover",
+      "text-summary",
+      "cobertura"
+    ]
   }
 }

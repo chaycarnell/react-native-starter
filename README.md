@@ -56,8 +56,10 @@ npm run ios:release | android:release
 
 **To rename:**
 
+Modify the script in the package.json file and replace the 'App Name' string with your desired app name, then run:
+
 ```bash
-npm run rename <new_app_name> -b <new_bundle_id>
+npm run rename
 ```
 
 **To install pods:**
