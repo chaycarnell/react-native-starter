@@ -20,6 +20,7 @@
     "ios:pods:update": "cd ios && pod install --repo-update && cd ..",
     "start:reset": "watchman watch-del-all && react-native start --reset-cache",
     "start": "react-native start",
+    "test:prepush": "jest",
     "test": "jest --watchAll --coverage",
     "test:ci": "jest --ci --coverage --passWithNoTests",
     "test:update": "jest --updateSnapshot",
