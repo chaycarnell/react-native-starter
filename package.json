@@ -1,7 +1,7 @@
 {
   "name": "rnbp",
   "description": "A quick start boilerplate for RN apps",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "license": "ISC",
   "scripts": {
     "android": "react-native run-android --variant=debug",
@@ -20,7 +20,6 @@
     "ios:pods:update": "cd ios && pod install --repo-update && cd ..",
     "start:reset": "watchman watch-del-all && react-native start --reset-cache",
     "start": "react-native start",
-    "test:prepush": "jest",
     "test": "jest --watchAll --coverage",
     "test:ci": "jest --ci --coverage --passWithNoTests",
     "test:update": "jest --updateSnapshot",
@@ -45,7 +44,6 @@
     "react-native-bootsplash": "^3.2.3",
     "react-native-config": "^1.4.2",
     "react-native-gesture-handler": "^1.10.3",
-    "react-native-reanimated": "^2.2.0",
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^3.3.0",
     "react-native-url-polyfill": "^1.3.0",

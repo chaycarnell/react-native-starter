@@ -77,5 +77,3 @@ npm run nuke
 ## Useful resources:
 
 React Native developer documentation: https://reactnative.dev/docs/getting-started
-
-There's a few tools online that make creating app icons easy, for example: https://appicon.co/

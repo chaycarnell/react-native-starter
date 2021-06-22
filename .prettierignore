@@ -2,3 +2,4 @@ node_modules
 ios
 android
 coverage
+__mocks__
