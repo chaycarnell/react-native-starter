@@ -1,42 +1,32 @@
 import React, { useEffect } from 'react';
 import { StatusBar } from 'react-native';
-import {
-  NavigationContainer,
-  NavigationContainerRef,
-} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import RNBootSplash from 'react-native-bootsplash';
 import { enableScreens } from 'react-native-screens';
 import { ApolloProvider, SafeArea } from '@components';
 import {
-  setNavigator,
+  navigator,
   applyBackHandleListener,
   removeBackHandleListener,
 } from '@utils/navigation';
-import {
-  applyDeepLinkListener,
-  removeDeepLinkListener,
-  checkUniversalLinkState,
-} from '@utils/linking';
-import { applyStateListeners, removeStateListeners } from '@utils/activity';
+import { applyDeepLinkListener, checkUniversalLinkState } from '@utils/linking';
+import { applyStateListeners } from '@utils/activity';
 import { Screens } from '@screens';
 
 // Optimize memory usage and performance by bringing the native navigation component (UIViewController for iOS, and FragmentActivity for Android)
 enableScreens();
 
 const App = () => {
-  // Set reference to navigation stack for use in nav util functions
-  const setRef = (navRef: NavigationContainerRef) => setNavigator(navRef);
-
   // Handle on app launch handlers here
   useEffect(() => {
-    applyStateListeners();
-    applyDeepLinkListener();
+    const appStateListener = applyStateListeners();
+    const linkingListener = applyDeepLinkListener();
     applyBackHandleListener();
     checkUniversalLinkState();
     RNBootSplash.hide({ fade: true });
     return () => {
-      removeStateListeners();
-      removeDeepLinkListener();
+      linkingListener.remove();
+      appStateListener.remove();
       removeBackHandleListener();
     };
   }, []);
@@ -45,7 +35,7 @@ const App = () => {
     <ApolloProvider>
       <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
       <SafeArea>
-        <NavigationContainer ref={setRef}>
+        <NavigationContainer ref={navigator}>
           <Screens />
         </NavigationContainer>
       </SafeArea>

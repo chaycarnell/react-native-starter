@@ -14,12 +14,8 @@ export const checkUniversalLinkState = () =>
     .then((url: any) => {
       if (url) handleLinking(url);
     })
-    .catch(e => console.log('Linking error: ', e));
+    .catch((e: any) => console.log('Linking error: ', e));
 
 // Handles deep linking or universal links where app is woken up from background
 export const applyDeepLinkListener = () =>
   Linking.addEventListener('url', handleLinking);
-
-// Remove listener for deep linking or universal links where app is woken up from background
-export const removeDeepLinkListener = () =>
-  Linking.removeEventListener('url', handleLinking);

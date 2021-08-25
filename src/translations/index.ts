@@ -1,20 +1,9 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import { NativeModules, Platform } from 'react-native';
+import { Resources } from './types';
 import en from './en';
-
-interface Translation {
-  [name: string]: string | Translation;
-}
-
-interface Resources {
-  en: {
-    translation: Translation;
-  };
-  de?: {
-    translation?: Translation;
-  };
-}
+import de from './de';
 
 // Initialise translation mappings
 const resources: Resources = {
@@ -24,7 +13,9 @@ const resources: Resources = {
     },
   },
   de: {
-    translation: {},
+    translation: {
+      ...de,
+    },
   },
 };
 
@@ -38,12 +29,12 @@ const deviceLanguage =
 // @ts-ignore
 i18n.use(initReactI18next).init({
   fallbackLng: 'en',
-  debug: true,
+  debug: false,
   interpolation: {
     escapeValue: false, // not needed for react as it escapes by default
   },
   resources,
-  lng: deviceLanguage,
+  lng: deviceLanguage.substr(0, 2),
 });
 
 export default i18n;

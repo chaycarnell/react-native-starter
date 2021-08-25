@@ -1,17 +1,11 @@
 import { BackHandler } from 'react-native';
-import { NavigationContainerRef } from '@react-navigation/native';
+import { createNavigationContainerRef } from '@react-navigation/native';
+
+export const navigator = createNavigationContainerRef();
 
 export type RootStackParamList = {
   Auth: {};
-  Content: {};
   Dashboard: {};
-};
-
-let navigator: NavigationContainerRef;
-
-// Sets a reference to navigation stack
-export const setNavigator = (navRef: NavigationContainerRef) => {
-  navigator = navRef;
 };
 
 // Returns the current navigation stack
@@ -31,7 +25,7 @@ export const navigate = (
       index: 0,
       routes: [{ name: screenName, params }],
     });
-  return navigation.navigate(screenName, params);
+  return navigation.navigate({ key: screenName, params });
 };
 
 // Returns a boolean based on if the user can go back further than the current screen
