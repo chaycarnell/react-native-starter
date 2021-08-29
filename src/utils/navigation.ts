@@ -25,7 +25,8 @@ export const navigate = (
       index: 0,
       routes: [{ name: screenName, params }],
     });
-  return navigation.navigate({ key: screenName, params });
+  // @ts-expect-error
+  return navigation.navigate(screenName, params);
 };
 
 // Returns a boolean based on if the user can go back further than the current screen

@@ -30,7 +30,7 @@
     "rename": "npx kill-port 8081 && npm install react-native-rename -g && npx react-native-rename 'RNBP' && npm run ios:pods && npm run start:reset"
   },
   "dependencies": {
-    "@apollo/client": "^3.4.9",
+    "@apollo/client": "^3.4.10",
     "@apollo/react-hooks": "^4.0.0",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/native": "^6.0.2",
@@ -42,7 +42,7 @@
     "react-i18next": "^11.11.4",
     "react-native": "0.65.1",
     "react-native-bootsplash": "^3.2.4",
-    "react-native-config": "^1.4.3",
+    "react-native-config": "^1.4.4",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-safe-area-context": "^3.3.0",
     "react-native-screens": "^3.6.0",
@@ -56,11 +56,11 @@
     "@react-native-community/eslint-config": "^3.0.0",
     "@testing-library/react-native": "^7.2.0",
     "@types/react-native": "^0.64.13",
-    "@types/styled-components": "^5.1.12",
+    "@types/styled-components": "^5.1.13",
     "@types/styled-components-react-native": "^5.1.1",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
-    "babel-jest": "^27.0.6",
+    "babel-jest": "^27.1.0",
     "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -70,7 +70,7 @@
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.4.1",
-    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react": "^7.25.0",
     "eslint-plugin-react-native": "^3.11.0",
     "husky": "^7.0.2",
     "jest": "^26.6.3",
@@ -80,7 +80,7 @@
     "react-native-codegen": "^0.0.7",
     "react-native-rename": "^2.9.0",
     "react-test-renderer": "17.0.2",
-    "typescript": "^4.3.5"
+    "typescript": "^4.4.2"
   },
   "jest": {
     "preset": "react-native",
