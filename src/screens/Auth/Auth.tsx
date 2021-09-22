@@ -15,7 +15,8 @@ const Render = ({ navigation }: Props) => (
   <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
     <TouchableHighlight
       testID="AuthNavigation"
-      onPress={() => navigation.navigate('Dashboard', {})}>
+      onPress={() => navigation.navigate('Dashboard', {})}
+    >
       <Example
         wrapperColor="#0f62fe"
         labelColor="#FFF"
