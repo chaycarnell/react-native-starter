@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, LogBox } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import RNBootSplash from 'react-native-bootsplash';
 import { enableScreens } from 'react-native-screens';
@@ -44,3 +44,8 @@ const App = () => {
 };
 
 export default App;
+
+// See: https://github.com/software-mansion/react-native-gesture-handler/issues/1831
+LogBox.ignoreLogs([
+  "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!",
+]);

@@ -1,5 +1,5 @@
 import 'cross-fetch/polyfill';
-import React from 'react';
+import React, { useMemo } from 'react';
 import {
   ApolloProvider,
   ApolloClient,
@@ -75,12 +75,16 @@ const Render = ({ children }: Props) => {
   );
 
   // Create new apollo client
-  const apolloClient = new ApolloClient({
-    link: ApolloLink.from([errorLink, authLink, link]),
-    cache: new InMemoryCache(),
-  });
+  const client = useMemo(
+    () =>
+      new ApolloClient({
+        link: ApolloLink.from([errorLink, authLink, link]),
+        cache: new InMemoryCache(),
+      }),
+    [errorLink, authLink, link],
+  );
 
-  return <ApolloProvider client={apolloClient}>{children}</ApolloProvider>;
+  return <ApolloProvider client={client}>{children}</ApolloProvider>;
 };
 
 export default Render;
