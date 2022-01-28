@@ -18,6 +18,7 @@ module.exports = {
     'react/require-default-props': 'off',
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'react-native/no-inline-styles': 'off',
   },
   settings: {
     react: {

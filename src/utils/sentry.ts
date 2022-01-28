@@ -1,3 +1,4 @@
+// @ts-expect-error
 import * as Sentry from '@sentry/react-native';
 import env from 'react-native-config';
 
@@ -24,6 +25,7 @@ export const initialiseSentry = () => {
   } catch (e) {
     if (!env.SENTRY_DSN)
       throw new Error('.ENV is missing valud SENTRY_DSN value!');
+    // @ts-expect-error
     throw new Error(e.message);
   }
 };
