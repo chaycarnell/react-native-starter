@@ -10,7 +10,7 @@
       "@assets/*": ["assets/*"],
       "@utils/*": ["utils/*"],
       "@queries": ["queries/"],
-      "@queries/*": ["queries/*"]
-    }
-  }
+      "@queries/*": ["queries/*"],
+    },
+  },
 }
