@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard screen given default props should render correctly 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    testID="DashboardNavigation"
+  >
+    <View
+      style={
+        {
+          "alignSelf": "center",
+          "backgroundColor": "#007d79",
+          "display": "flex",
+          "height": 667,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 750,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#FFF",
+            "fontSize": 24,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
