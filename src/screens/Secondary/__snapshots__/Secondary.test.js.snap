@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dashboard screen given default props should render correctly 1`] = `
+exports[`Secondary screen given default props should render correctly 1`] = `
 <View
   style={
     {
@@ -28,13 +28,13 @@ exports[`Dashboard screen given default props should render correctly 1`] = `
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    testID="DashboardNavigationButton"
+    testID="SecondaryNavigationButton"
   >
     <View
       style={
         {
           "alignSelf": "center",
-          "backgroundColor": "#007d79",
+          "backgroundColor": "#0f62fe",
           "display": "flex",
           "height": 667,
           "justifyContent": "center",
