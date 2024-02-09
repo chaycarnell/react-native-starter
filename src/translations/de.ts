@@ -1,9 +1,11 @@
+import { ScreenNames } from '@types';
+
 const en = {
-  AUTH: {
-    DESC: 'Auth – zum Navigieren tippen',
+  [ScreenNames.DASHBOARD]: {
+    description: 'Armaturenbrett – zum Navigieren tippen',
   },
-  DASHBOARD: {
-    DESC: 'Dashboard – zum Navigieren tippen',
+  [ScreenNames.SECONDARY]: {
+    description: 'Sekundär – zum Navigieren tippen',
   },
 };
 

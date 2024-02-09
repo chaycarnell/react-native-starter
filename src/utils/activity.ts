@@ -1,4 +1,5 @@
 import { AppState, AppStateStatus } from 'react-native';
+
 import { logger } from './logger';
 
 // Handles listener actions for device state changes

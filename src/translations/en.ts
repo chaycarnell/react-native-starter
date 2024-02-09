@@ -1,9 +1,11 @@
+import { ScreenNames } from '@types';
+
 const en = {
-  AUTH: {
-    DESC: 'Auth - tap to navigate',
+  [ScreenNames.DASHBOARD]: {
+    description: 'Dashboard - tap to navigate',
   },
-  DASHBOARD: {
-    DESC: 'Dashboard - tap to navigate',
+  [ScreenNames.SECONDARY]: {
+    description: 'Secondary - tap to navigate',
   },
 };
 

@@ -2,8 +2,8 @@ import {
   ApolloClient,
   ApolloLink,
   ApolloProvider,
-  InMemoryCache,
   createHttpLink,
+  InMemoryCache,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { onError } from '@apollo/client/link/error';

@@ -3,14 +3,12 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "@components": ["components/"],
-      "@components/*": ["components/*"],
-      "@screens": ["screens/"],
-      "@screens/*": ["screens/*"],
-      "@assets/*": ["assets/*"],
-      "@utils/*": ["utils/*"],
-      "@queries": ["queries/"],
-      "@queries/*": ["queries/*"]
+      "@components": ["components/index"],
+      "@graphql": ["graphql/index"],
+      "@screens": ["screens/index"],
+      "@translations": ["translations/index"],
+      "@types": ["types/index"],
+      "@utils/*": ["utils/*"]
     }
   }
 }

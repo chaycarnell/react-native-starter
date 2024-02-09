@@ -1,10 +1,12 @@
-import i18n from 'i18next';
 import 'intl-pluralrules';
+
+import { Resource } from '@types';
+import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import { NativeModules, Platform } from 'react-native';
+
 import de from './de';
 import en from './en';
-import { Resource } from './types';
 
 // Initialise translation mappings
 const resources: Resource = {
@@ -17,7 +19,7 @@ const resources: Resource = {
 };
 
 // Initialise translation language from device settings
-const deviceLanguage =
+export const deviceLanguage =
   Platform.OS === 'ios'
     ? NativeModules.SettingsManager.settings.AppleLocale ||
       NativeModules.SettingsManager.settings.AppleLanguages[0] // iOS 13

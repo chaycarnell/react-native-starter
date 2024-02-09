@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
+
 import { Label, Wrapper } from './Example.styles';
 
 interface Props {

@@ -1,4 +1,5 @@
 import { Linking } from 'react-native';
+
 import { logger } from './logger';
 
 // Handles opening a link

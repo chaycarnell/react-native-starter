@@ -1,36 +1,28 @@
 import { Example } from '@components';
 import { useFocusEffect } from '@react-navigation/native';
-import { StackNavigationProp } from '@react-navigation/stack';
+import { ScreenNames } from '@types';
 import { logger } from '@utils/logger';
-import { RootStackParamList } from '@utils/navigation';
+import { navigate } from '@utils/navigation';
 import i18n from 'i18next';
 import React from 'react';
 import { TouchableHighlight, View } from 'react-native';
-import { DashboardView } from './Dashboard.styles';
 
-type DashboardScreenNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  'Dashboard'
->;
+import { DashboardViewStyles } from './Dashboard.styles';
 
-interface Props {
-  navigation: DashboardScreenNavigationProp;
-}
-
-const Render = ({ navigation }: Props) => {
+const Render = () => {
   useFocusEffect(() => {
-    logger.info('Logging on screen focus!');
+    logger.info(`Logging ${ScreenNames.DASHBOARD} screen focus event!`);
   });
 
   return (
-    <View style={DashboardView.style}>
+    <View style={DashboardViewStyles}>
       <TouchableHighlight
-        testID="DashboardNavigation"
-        onPress={() => navigation.navigate('Auth', {})}>
+        testID="DashboardNavigationButton"
+        onPress={() => navigate(ScreenNames.SECONDARY)}>
         <Example
           wrapperColor="#007d79"
           labelColor="#FFF"
-          label={i18n.t('DASHBOARD.DESC')}
+          label={i18n.t('Dashboard.description')}
         />
       </TouchableHighlight>
     </View>

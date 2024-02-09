@@ -1,29 +1,36 @@
 import {
   CommonActions,
   createNavigationContainerRef,
+  NavigationContainerRefWithCurrent,
 } from '@react-navigation/native';
+import { RootStackParamList, ScreenNames } from '@types';
 import { BackHandler } from 'react-native';
 
-// Initialise a root navigation ref
-export const navigator = createNavigationContainerRef();
+export const navigation: NavigationContainerRefWithCurrent<RootStackParamList> =
+  createNavigationContainerRef();
 
 // Custom navigate handler allowing stack to be reset in props
 export const navigate = (
-  screenName: string,
-  params: any,
-  resetStack: boolean | undefined = false,
+  screenName: ScreenNames,
+  params?: RootStackParamList[ScreenNames],
+  resetStack = false,
 ) => {
   if (resetStack) {
-    return CommonActions.reset({
+    return navigation.reset({
       index: 0,
       routes: [{ name: screenName, params }],
     });
   }
-  return CommonActions.navigate(screenName, params);
+  return navigation.dispatch(
+    CommonActions.navigate({
+      name: screenName,
+      params,
+    }),
+  );
 };
 
 // Returns a boolean based on if the user can go back further than the current screen
-export const canGoBack = () => navigator.canGoBack();
+export const canGoBack = () => navigation.canGoBack();
 
 // Prevent hardware back if back options not available
 // This prevents the app closing in Android
@@ -32,12 +39,3 @@ const handleHardwareBack = () => !canGoBack();
 // Handles applying hardware back action event listener
 export const applyBackHandleListener = () =>
   BackHandler.addEventListener('hardwareBackPress', handleHardwareBack);
-
-// Handles removing hardware back action event listener
-export const removeBackHandleListener = () =>
-  BackHandler.removeEventListener('hardwareBackPress', handleHardwareBack);
-
-export type RootStackParamList = {
-  Auth: {};
-  Dashboard: {};
-};
