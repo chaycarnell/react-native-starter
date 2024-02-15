@@ -1,4 +1,11 @@
 {
   "name": "StarterApp",
-  "displayName": "StarterApp"
+  "displayName": "StarterApp",
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "95a737c3-c977-4229-ac11-406b62862708"
+      }
+    }
+  }
 }
