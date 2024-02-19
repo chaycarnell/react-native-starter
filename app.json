@@ -1,10 +1,10 @@
 {
-  "name": "StarterApp",
+  "name": "react-native-starter",
   "displayName": "StarterApp",
   "expo": {
     "extra": {
       "eas": {
-        "projectId": "db637d8d-bf30-4d80-a99a-787aaed7ef5d"
+        "projectId": "e85d905d-fae8-46ba-80f2-0a8936f5161e"
       }
     }
   }
