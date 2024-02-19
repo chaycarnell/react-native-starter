@@ -4,7 +4,6 @@
     "baseUrl": "./src",
     "paths": {
       "@components": ["components/index"],
-      "@graphql": ["graphql/index"],
       "@screens": ["screens/index"],
       "@translations": ["translations/index"],
       "@types": ["types/index"],

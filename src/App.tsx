@@ -1,4 +1,4 @@
-import { ApolloProvider, SafeArea } from '@components';
+import { SafeArea } from '@components';
 import { NavigationContainer } from '@react-navigation/native';
 import Screens from '@screens';
 import { applyStateListeners } from '@utils/activity';
@@ -32,9 +32,7 @@ const App = () => {
       <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
       <SafeArea>
         <NavigationContainer ref={navigation}>
-          <ApolloProvider>
-            <Screens />
-          </ApolloProvider>
+          <Screens />
         </NavigationContainer>
       </SafeArea>
     </>
