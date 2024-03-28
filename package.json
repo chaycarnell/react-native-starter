@@ -20,12 +20,17 @@
     "prepare": "husky install",
     "prettier:write": "npx prettier --write **/*.{js,ts,tsx,json} && npx prettier --write *.{js,json}",
     "reset": "watchman watch-del-all && react-native start --reset-cache",
-    "sort": "npx sort-package-json",
+    "sort:package": "npx sort-package-json",
     "start": "react-native start",
     "test": "jest --watchAll --coverage",
     "test:ci": "jest --ci --coverage --passWithNoTests",
     "test:update": "jest --updateSnapshot",
     "types:check": "tsc --noEmit"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "dependencies": {
     "@react-navigation/native": "6.1.17",
@@ -55,6 +60,7 @@
     "@types/react-test-renderer": "^18.0.7",
     "babel-jest": "^29.7.0",
     "babel-plugin-module-resolver": "^5.0.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.57.0",
     "eslint-plugin-ft-flow": "^3.0.7",
     "eslint-plugin-prettier": "^5.1.3",

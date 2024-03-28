@@ -2,3 +2,13 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npm run lint && npm run test:ci
+
+# Branch prefix validation
+branch_name=$(git rev-parse --abbrev-ref HEAD)
+pattern="^(feature|build|chore|fix|release|docs|refactor|test)/"
+
+if [[ ! $branch_name =~ $pattern ]]; then
+  echo "Error: Branch name must start with one of 'feature/', 'build/', 'chore/', 'fix/', 'release/', 'docs/', 'refactor/', 'test/'"
+  echo "Your branch name is: $branch_name"
+  exit 1
+fi
