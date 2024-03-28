@@ -9,9 +9,9 @@ NC='\033[0m'
 yarn run test:ci && yarn run lint && yarn check:types && yarn check:audit && yarn check:outdated
 
 echo "${BLUE}#####################################################${NC}"
-echo "${BLUE}##                                                 ##${NC}"
-echo "${BLUE}##  OUTDATED DEPENDENCIES PRINTED FOR INFO ONLY    ##${NC}"
-echo "${BLUE}##                                                 ##${NC}"
+echo "${BLUE}##${NC}"
+echo "${BLUE}##  OUTDATED DEPENDENCIES PRINTED FOR INFO ONLY${NC}"
+echo "${BLUE}##${NC}"
 echo "${BLUE}#####################################################${NC}"
 
 # Branch prefix validation
@@ -20,11 +20,11 @@ pattern="^(feature|build|chore|fix|release|docs|refactor|test)/"
 
 if [[ ! $branch_name =~ $pattern ]]; then
   echo ""
-  echo "${RED}#########################################################${NC}"
-  echo "${RED}Error: Branch name must start with one of:${NC}"
-  echo "${RED}'feature/', 'build/', 'chore/', 'fix/', 'release/', 'docs/', 'refactor/', 'test/'${NC}"
-  echo "${RED}Your branch name is: $branch_name${NC}"
-  echo "${RED}#########################################################${NC}"
+  echo "${RED}#####################################################${NC}"
+  echo "${RED}# Error: Branch name must start with one of:${NC}"
+  echo "${RED}# 'feature/', 'build/', 'chore/', 'fix/', 'release/', 'docs/', 'refactor/', 'test/'${NC}"
+  echo "${RED}# Your branch name is: $branch_name${NC}"
+  echo "${RED}#####################################################${NC}"
   echo ""
   exit 1
 fi
