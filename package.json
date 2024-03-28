@@ -15,7 +15,7 @@
     "ios:pods": "cd ios && pod install && cd ..",
     "ios:pods:update": "cd ios && pod install --repo-update && cd ..",
     "ios:release": "yarn ios --mode Release",
-    "lint": "yarn types:check && eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "yarn lint -- --fix",
     "prepare": "husky install",
     "prettier:write": "npx prettier --write **/*.{js,ts,tsx,json} && npx prettier --write *.{js,json}",
@@ -25,7 +25,9 @@
     "test": "jest --watchAll --coverage",
     "test:ci": "jest --ci --coverage --passWithNoTests",
     "test:update": "jest --updateSnapshot",
-    "types:check": "tsc --noEmit"
+    "check:audit": "yarn audit --level high",
+    "check:types": "tsc --noEmit",
+    "check:outdated": "yarn outdated || true"
   },
   "config": {
     "commitizen": {

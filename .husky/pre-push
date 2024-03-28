@@ -1,7 +1,14 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run lint && npm run test:ci
+BLUE='\033[0;34m'
+GREEN='\033[0;32m'
+
+yarn run test:ci && yarn run lint && yarn check:types && yarn check:audit && yarn check:outdated
+
+echo -e "${BLUE}#########################################################"
+echo -e "${BLUE}##     OUTDATED DEPENDENCIES PRINTED FOR INFO          ##"
+echo -e "${BLUE}#########################################################"
 
 # Branch prefix validation
 branch_name=$(git rev-parse --abbrev-ref HEAD)
@@ -12,3 +19,5 @@ if [[ ! $branch_name =~ $pattern ]]; then
   echo "Your branch name is: $branch_name"
   exit 1
 fi
+
+echo -e "${GREEN}# ALL PRE-PUSH CHECKS PASSED #"
