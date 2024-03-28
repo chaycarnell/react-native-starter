@@ -3,12 +3,15 @@
 
 BLUE='\033[0;34m'
 GREEN='\033[0;32m'
+NC='\033[0m'
 
 yarn run test:ci && yarn run lint && yarn check:types && yarn check:audit && yarn check:outdated
 
-echo -e "${BLUE}#########################################################"
-echo -e "${BLUE}##     OUTDATED DEPENDENCIES PRINTED FOR INFO          ##"
-echo -e "${BLUE}#########################################################"
+echo "${BLUE}#########################################################${NC}"
+echo "${BLUE}##                                                     ##${NC}"
+echo "${BLUE}##    OUTDATED DEPENDENCIES PRINTED FOR INFO ONLY      ##${NC}"
+echo "${BLUE}##                                                     ##${NC}"
+echo "${BLUE}#########################################################${NC}"
 
 # Branch prefix validation
 branch_name=$(git rev-parse --abbrev-ref HEAD)
@@ -20,4 +23,4 @@ if [[ ! $branch_name =~ $pattern ]]; then
   exit 1
 fi
 
-echo -e "${GREEN}# ALL PRE-PUSH CHECKS PASSED #"
+echo -e "${GREEN}# ALL PRE-PUSH CHECKS PASSED #${NC}"
